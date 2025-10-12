@@ -3,15 +3,12 @@ import express, { Request, Response, NextFunction } from "express";
 import path from "path";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
-
-import indexRouter from "./routes/index";
-import usersRouter from "./routes/users";
+import logsRouter from "./routes/logRouter";
+import droneRouter from "./routes/droneRoute";
+import incidentRouter from "./routes/incidentRoute";
+import prePostCheckRouter from "./routes/prePostCheckRoute";
 
 const app = express();
-
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "jade");
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -19,8 +16,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+
+app.use("/api/logs", logsRouter);
+app.use("/api/drones", droneRouter);
+app.use("/api/incidents", incidentRouter);
+app.use("/api/prepostchecks", prePostCheckRouter);
 
 // catch 404 and forward to error handler
 app.use((req: Request, res: Response, next: NextFunction) => {
