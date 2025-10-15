@@ -1,0 +1,128 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+4 0 obj
+<<
+/Length 1500
+>>
+stream
+BT
+/F1 12 Tf
+72 720 Td
+(Drone Log Management System - Low Level Design) Tj
+0 -20 Td
+(API Endpoints) Tj
+0 -20 Td
+(Drone APIs:) Tj
+0 -20 Td
+(- POST /api/drones/add: Create drone) Tj
+0 -20 Td
+(- PUT /api/drones/edit/:id: Update drone) Tj
+0 -20 Td
+(- GET /api/drones/getallDrones: Get all drones) Tj
+0 -20 Td
+(- DELETE /api/drones/delete/:id: Delete drone) Tj
+0 -20 Td
+(Log APIs:) Tj
+0 -20 Td
+(- POST /api/logs/upload: Upload .tlog file) Tj
+0 -20 Td
+(- GET /api/logs: Get all logs) Tj
+0 -20 Td
+(- GET /api/logs/:id: Get log by ID) Tj
+0 -20 Td
+(- DELETE /api/logs/:id: Delete log) Tj
+0 -20 Td
+(Incident APIs:) Tj
+0 -20 Td
+(- GET /api/incidents: Get all incidents) Tj
+0 -20 Td
+(- GET /api/incidents/:id: Get incident by ID) Tj
+0 -20 Td
+(- POST /api/incidents: Create incident) Tj
+0 -20 Td
+(- PUT /api/incidents/:id: Update incident) Tj
+0 -20 Td
+(- DELETE /api/incidents/:id: Delete incident) Tj
+0 -20 Td
+(PrePostCheck APIs:) Tj
+0 -20 Td
+(- GET /api/prepostchecks: Get all checks) Tj
+0 -20 Td
+(- GET /api/prepostchecks/:id: Get check by ID) Tj
+0 -20 Td
+(- POST /api/prepostchecks: Create check) Tj
+0 -20 Td
+(- PUT /api/prepostchecks/:id: Update check) Tj
+0 -20 Td
+(- DELETE /api/prepostchecks/:id: Delete check) Tj
+0 -20 Td
+(Database Schema) Tj
+0 -20 Td
+(Drone: { name, modelName, serial, createdAt }) Tj
+0 -20 Td
+(Log: { drone, filename, path, size, startTime, endTime, durationSeconds, gpsTrack, messagesCount, parsedSummary, raw }) Tj
+0 -20 Td
+(Incident: { drone, log, title, description, severity, createdBy }) Tj
+0 -20 Td
+(PrePostCheck: { drone, log, type, items, performedBy }) Tj
+0 -20 Td
+(Frontend Components) Tj
+0 -20 Td
+(- AirCraft: Drone CRUD with table and forms) Tj
+0 -20 Td
+(- Logs: Log upload, list, details, delete) Tj
+0 -20 Td
+(- Incidents: Incident CRUD with table and forms) Tj
+0 -20 Td
+(- PrePostCheck: Check CRUD with table and forms) Tj
+ET
+endstream
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000274 00000 n 
+0000001775 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1876
+%%EOF

@@ -1,0 +1,92 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+4 0 obj
+<<
+/Length 1000
+>>
+stream
+BT
+/F1 12 Tf
+72 720 Td
+(Drone Log Management System - High Level Design) Tj
+0 -20 Td
+(Overview) Tj
+0 -20 Td
+(This system provides a platform to track drones, incidents, logs, and pre/post-flight checks.) Tj
+0 -20 Td
+(Architecture) Tj
+0 -20 Td
+(- Backend: Node.js, Express, TypeScript, MongoDB) Tj
+0 -20 Td
+(- Frontend: React, TypeScript, Vite, Tailwind CSS) Tj
+0 -20 Td
+(- Database: MongoDB with Mongoose ODM) Tj
+0 -20 Td
+(Features) Tj
+0 -20 Td
+(- Drone management: CRUD operations for aircraft) Tj
+0 -20 Td
+(- Log upload and parsing: MAVLink .tlog files) Tj
+0 -20 Td
+(- Incident tracking: Create, update, delete incidents) Tj
+0 -20 Td
+(- Pre/Post flight checks: Automated and manual checks) Tj
+0 -20 Td
+(Technologies) Tj
+0 -20 Td
+(- Backend: Express, Mongoose, node-mavlink) Tj
+0 -20 Td
+(- Frontend: React Router, Radix UI, TanStack Table) Tj
+0 -20 Td
+(- Testing: Jest, Supertest) Tj
+ET
+endstream
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000274 00000 n 
+0000001375 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1476
+%%EOF

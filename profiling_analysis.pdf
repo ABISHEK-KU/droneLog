@@ -1,0 +1,90 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+4 0 obj
+<<
+/Length 800
+>>
+stream
+BT
+/F1 12 Tf
+72 720 Td
+(CPU + RAM/Time Profiling Analysis) Tj
+0 -20 Td
+(Log Parsing Performance) Tj
+0 -20 Td
+(- Time: 157.75 ms) Tj
+0 -20 Td
+(- Memory Used: 0.02 MB) Tj
+0 -20 Td
+(- Peak RSS: 40.83 MB) Tj
+0 -20 Td
+(- Analysis: Efficient parsing with minimal memory overhead) Tj
+0 -20 Td
+(API Endpoint Performance) Tj
+0 -20 Td
+(- Time: 152.38 ms) Tj
+0 -20 Td
+(- Memory Used: 0.75 MB) Tj
+0 -20 Td
+(- Peak RSS: 43.27 MB) Tj
+0 -20 Td
+(- Analysis: Fast response times, acceptable memory usage) Tj
+0 -20 Td
+(Improvements Identified) Tj
+0 -20 Td
+(- Log parsing could be optimized for larger files) Tj
+0 -20 Td
+(- API caching could reduce response times) Tj
+0 -20 Td
+(- Memory pooling for repeated operations) Tj
+ET
+endstream
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000000 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000274 00000 n 
+0000001075 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1176
+%%EOF
