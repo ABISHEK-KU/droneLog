@@ -1,11 +1,11 @@
-import { Drone } from "lucide-react";
+import { Drone, FileClock, ListChecks, OctagonAlert } from "lucide-react";
+import { Link, useLocation } from "react-router";
 
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -14,13 +14,30 @@ import {
 // Menu items.
 const items = [
   {
-    title: "AirCraft",
+    title: "Drones",
     url: "/",
     icon: Drone,
+  },
+  {
+    title: "Logs",
+    url: "/logs",
+    icon: FileClock,
+  },
+  {
+    title: "Incidents",
+    url: "/incidents",
+    icon: OctagonAlert,
+  },
+  {
+    title: "Pre & Post Checks",
+    url: "/prepostcheck",
+    icon: ListChecks,
   },
 ];
 
 export function AppSidebar() {
+  const location = useLocation();
+
   return (
     <Sidebar>
       <SidebarContent>
@@ -29,11 +46,11 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                  <SidebarMenuButton asChild isActive={location.pathname === item.url}>
+                    <Link to={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

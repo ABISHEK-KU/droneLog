@@ -3,18 +3,23 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --exec ts-node app.ts"
+    "start": "nodemon --exec ts-node app.ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
+    "clinic": "^13.0.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^17.2.3",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "mongoose": "^8.19.1",
     "morgan": "~1.9.1",
     "multer": "^2.0.2",
-    "node-mavlink": "^1.0.0-rc.1"
+    "node-mavlink": "^1.0.0-rc.1",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.9",
@@ -22,10 +27,16 @@
     "@types/express": "^5.0.3",
     "@types/http-errors": "^2.0.5",
     "@types/jade": "^0.0.34",
+    "@types/jest": "^29.5.12",
     "@types/morgan": "^1.9.10",
     "@types/multer": "^2.0.0",
     "@types/node": "^22.18.9",
+    "@types/supertest": "^6.0.2",
+    "@types/swagger-ui-express": "^4.1.8",
+    "jest": "^29.7.0",
     "nodemon": "^3.1.10",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }

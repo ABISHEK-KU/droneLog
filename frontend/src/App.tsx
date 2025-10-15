@@ -4,23 +4,41 @@ import { AppSidebar } from "./components/AppSidebar";
 import Header from "./components/Header";
 import { SidebarProvider, SidebarInset } from "./components/ui/sidebar";
 import AirCraft from "./pages/AirCraft";
+import Incidents from "./pages/Incidents";
+import Logs from "./pages/Logs";
+import PrePostCheck from "./pages/PrePostCheck";
+import { AircraftProvider } from "./context/useAircraft";
+import { LogsProvider } from "./context/useLogs";
+import { IncidentsProvider } from "./context/useIncidents";
+import { PrePostChecksProvider } from "./context/usePrePostChecks";
 
 function App() {
   return (
     <>
-      <Header />
-      <SidebarProvider>
-        <div className="flex w-full">
-          <AppSidebar />
-          <SidebarInset>
-            <main className="flex-1 p-4 pt-16">
-              <Routes>
-                <Route path="/" element={<AirCraft />} />
-              </Routes>
-            </main>
-          </SidebarInset>
-        </div>
-      </SidebarProvider>
+      <AircraftProvider>
+        <LogsProvider>
+          <IncidentsProvider>
+            <PrePostChecksProvider>
+              <Header />
+              <SidebarProvider>
+                <div className="flex w-full">
+                  <AppSidebar />
+                  <SidebarInset>
+                    <main className="flex-1 p-4 pt-16">
+                      <Routes>
+                        <Route path="/" element={<AirCraft />} />
+                        <Route path="/incidents" element={<Incidents />} />
+                        <Route path="/logs" element={<Logs />} />
+                        <Route path="/prepostcheck" element={<PrePostCheck />} />
+                      </Routes>
+                    </main>
+                  </SidebarInset>
+                </div>
+              </SidebarProvider>
+            </PrePostChecksProvider>
+          </IncidentsProvider>
+        </LogsProvider>
+      </AircraftProvider>
     </>
   );
 }

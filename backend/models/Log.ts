@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import { Schema, Document, model } from 'mongoose';
 import { IDrone } from './Drone';
 
 // Define interface for Log document
@@ -34,4 +34,4 @@ const LogSchema= new Schema<ILog>(
 );
 
 // Create and export the Log model based on Log interface and LogSchema
-export default mongoose.model<ILog & Document>(`Log`, LogSchema);
+export const Log=model<ILog & Document>(`Log`, LogSchema);
