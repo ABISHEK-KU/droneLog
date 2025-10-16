@@ -46,13 +46,18 @@ const Logs = () => {
     setSelectedLogId(null);
   };
 
+  const loadAllData = async () => {
+    await fetchLogs();
+    await fetchIncidents();
+    await fetchChecks();
+  };
+
+  const handleUploadSuccess = async () => {
+    await loadAllData();
+  };
+
   useEffect(() => {
-    const loadData = async () => {
-      await fetchLogs();
-      await fetchIncidents();
-      await fetchChecks();
-    };
-    loadData();
+    loadAllData();
   }, []);
 
   return (
@@ -122,6 +127,7 @@ const Logs = () => {
       <LogUploadForm
         open={uploadOpen}
         setOpen={setUploadOpen}
+        onUploadSuccess={handleUploadSuccess}
       />
       <DeleteLog
         open={deleteDialog}

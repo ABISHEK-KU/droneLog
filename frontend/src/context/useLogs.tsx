@@ -19,7 +19,6 @@ export const LogsProvider = ({ children }: { children: React.ReactNode }) => {
   const uploadLog = async (file: File, droneId: string) => {
     try {
       await uploadLogService(file, droneId);
-      fetchLogs(); // Refresh logs after upload
     } catch (error) {
       console.error("Failed to upload log:", error);
       throw error;

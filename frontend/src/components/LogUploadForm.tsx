@@ -23,9 +23,10 @@ import { useState } from "react";
 interface LogUploadFormProps {
   open: boolean;
   setOpen: (open: boolean) => void;
+  onUploadSuccess?: () => void;
 }
 
-const LogUploadForm: React.FC<LogUploadFormProps> = ({ open, setOpen }) => {
+const LogUploadForm: React.FC<LogUploadFormProps> = ({ open, setOpen, onUploadSuccess }) => {
   const { aircraftsData } = useAircraft();
   const { uploadLog } = useLogs();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -43,6 +44,9 @@ const LogUploadForm: React.FC<LogUploadFormProps> = ({ open, setOpen }) => {
     setUploading(true);
     try {
       await uploadLog(selectedFile, selectedDroneId);
+      if (onUploadSuccess) {
+        onUploadSuccess();
+      }
       setOpen(false);
       setSelectedFile(null);
       setSelectedDroneId("");
