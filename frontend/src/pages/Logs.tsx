@@ -47,9 +47,12 @@ const Logs = () => {
   };
 
   useEffect(() => {
-    fetchLogs();
-    fetchIncidents();
-    fetchChecks();
+    const loadData = async () => {
+      await fetchLogs();
+      await fetchIncidents();
+      await fetchChecks();
+    };
+    loadData();
   }, []);
 
   return (
