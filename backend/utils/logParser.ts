@@ -122,14 +122,16 @@ export async function parseTlog(filePath: string) {
       `Attempting to parse packet at offset ${packetStart}, length ${packetLen}`
     );
     try {
-      parser.write(packet);
+      // Ensure packet is a Buffer
+      const packetBuffer = Buffer.isBuffer(packet) ? packet : Buffer.from(packet);
+      parser.write(packetBuffer);
       console.log("Packet written successfully");
     } catch (error) {
       // Malformed MAVLink packet (e.g., bad CRC). Skip the entire block and try to re-sync
       console.log("Error parsing packet:", error);
       offset = packetStart + packetLen;
       continue;
-    } // CRITICAL FIX: Advance the offset by the total block size: // TIMESTAMP_LEN (8 bytes) + packetLen (MAVLink packet)
+    }
     offset = packetStart + packetLen;
   }
 
